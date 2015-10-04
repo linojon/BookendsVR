@@ -1,0 +1,22 @@
+# https://gist.github.com/thebeardphantom/982bab3b026571ab7970
+
+# Ignore everything
+/*
+/*/
+
+# Inverse ignore some stuff
+!/Assets/
+!/ProjectSettings/
+!.gitignore
+
+!README.md
+
+# OS Stuff (e.g. in the inverse ignored directories)
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+$RECYCLE.BIN/
+Desktop.ini
