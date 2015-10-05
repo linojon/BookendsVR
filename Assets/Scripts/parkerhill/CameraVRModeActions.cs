@@ -7,13 +7,14 @@ namespace Parkerhill
     /// <summary>
     /// CameraVRModeActions
     /// version for use with UI checkbox toggles, behaves like radios
+    /// JSL 10/4/2015
     /// </summary>
 	public class CameraVRModeActions : MonoBehaviour
     {
         public Toggle vrModeToggle;
         public Toggle flatModeToggle;
 
-        void Awake()
+        void Start()
         {
             if (vrModeToggle != null)
                 vrModeToggle.isOn = CameraVRMode.GetVRMode();
@@ -23,15 +24,20 @@ namespace Parkerhill
 
         public void EnableVRMode()
         {
-            Debug.Log("EnableVRMode");
-            CameraVRMode.SetVRMode(true);
+            if (vrModeToggle.isOn)
+            {
+                Debug.Log("EnableVRMode");
+                CameraVRMode.SetVRMode(true);
+            }
         }
 
         public void DisableVRMode()
         {
-            Debug.Log("DisableVRMode");
-            CameraVRMode.SetVRMode(false);
+            if (flatModeToggle.isOn)
+            {
+                Debug.Log("DisableVRMode");
+                CameraVRMode.SetVRMode(false);
+            }
         }
-
     }
 }

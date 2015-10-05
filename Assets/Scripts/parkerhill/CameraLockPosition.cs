@@ -9,6 +9,7 @@ namespace Parkerhill
     /// Note: not related to locomotion which should be handled in a parent object of the camera
     /// TODO: make this a singleton
     /// TODO: compiler directives when Cardboard
+    /// JSL 10/4/2015
     /// </summary>
     public class CameraLockPosition : MonoBehaviour
     {
